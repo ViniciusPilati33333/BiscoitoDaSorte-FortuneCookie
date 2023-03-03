@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(45deg, #190361, #bb00ff);
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+
+
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+   /* alinhando ao centro */
+    display: grid;
+    place-items: center;
+}
+
+.screen1.hide,
+.screen2.hide {
+    display: none;
+}
+
+
+/* SCREEN 1*/
+
+.screen1 {
+    margin-top: 5.3rem;
+    width: 40rem;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+ h1 {
+    padding-top: 4.8rem;
+    /* margin-top: 4.8rem; */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    color: #34355B;
+    margin-bottom: 1.4rem;
+        
+}
+
+.screen1 p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #34355B;
+    margin-bottom: 2rem;
+}
+
+.screen1 img {
+    margin-bottom: 6.4rem;
+}
+
+
+/* Screen 2*/
+
+.screen2 {
+    width: 40rem;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.screen2 p {
+    font-family: 'Dancing Script', cursive;
+    color: #000000;
+    background: #E4EDF1;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+
+    /* animando */
+    font-size: 2rem; /* Define o tamanho original da fonte */
+    transform-origin: bottom; /* Define o ponto de origem da transformação */
+    transform: scaleY(0); /* Inicia a escala Y em 0 para animar de baixo para cima */
+    animation: moveUp 2s forwards; /* Animação com duração de 1 segundo e mantém o estado final */
+      
+}
+
+button {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    background: #FF9500;
+    border-radius: 4px;
+    width: 174px;
+    height: 52px;
+    margin-bottom: 4.8rem;
+    transition: background .3s;
+    border: none;
+}
+
+button:hover {
+    background: #b8710d;
+}
+
+.screen1 img:hover {
+    animation: shakeCookie 0.2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shakeCookie {
+    from {
+        transform: rotate(0.009turn);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: scaleY(0); /* Define a escala Y em 0 para animar de baixo para cima */
+    }
+
+    100% {
+        transform: scaleY(1); /* Define a escala Y em 1 para a fonte chegar ao tamanho original */
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
+
+
+
+
